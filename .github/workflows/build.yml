@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Build ${{matrix.target}}
     env:
-      REPO_URL: https://github.com/openwrt/openwrt.git
-      UPLOAD_BIN_DIR: true
+      REPO_URL: https://github.com/openwrt/openwrt
+      UPLOAD_BIN_DIR: false
       UPLOAD_FIRMWARE: true
-      UPLOAD_COWTRANSFER: true
-      UPLOAD_WETRANSFER: true
+      UPLOAD_COWTRANSFER: false
+      UPLOAD_WETRANSFER: false
       OP_TARGET: ${{matrix.target}}
     strategy:
       fail-fast: false
